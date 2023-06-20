@@ -1,10 +1,18 @@
 .PackingList {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   min-height: 60vh;
   ul.list {
+    overflow-y: scroll;
+    flex: 80%;
+    max-height: 55vh;
     list-style: none;
     li {
-      padding: 0;
+      padding: 8px;
+      width: 80%;
+      border-bottom: 1px solid $color-acc-dark;
+      font-size: 1.2rem;
 
       input[type="checkbox"] {
         margin-right: 1rem;
@@ -14,6 +22,40 @@
         outline: 0;
         font-size: 0.6rem;
       }
+    }
+  }
+
+  .sort-controls {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex: 20%;
+    height: 3rem;
+    bottom: 0;
+
+    select,
+    button {
+      outline: none;
+      border: none;
+    }
+
+    select {
+      border: 1px solid $color-acc-med;
+      padding: 8px;
+      border-radius: 8px;
+
+      option {
+        font-size: 0.8125rem;
+      }
+    }
+
+    button {
+      background-color: $color-acc-dark;
+      padding: 8px;
+      border-radius: 8px;
+      color: white;
     }
   }
 }
