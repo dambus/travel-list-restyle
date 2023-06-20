@@ -1,9 +1,20 @@
+@import "bpoints";
+
+@import url("https://fonts.googleapis.com/css2?family=Monoton&family=Quicksand:wght@500;700&display=swap");
+
 // COLORS
-$color-bg: #3c979f;
+// $color-bg: #3c979f;
+// $color-light: #deebec;
+// $color-acc-light: #bed9dd;
+// $color-acc-med: #aecfd0;
+// $color-acc-dark: #73b3b2;
+
+$color-bg: rgba(#bed9dd, 0.25);
 $color-light: #deebec;
 $color-acc-light: #bed9dd;
 $color-acc-med: #aecfd0;
 $color-acc-dark: #73b3b2;
+$color-text: #3c979f;
 
 // CSS RESET
 /* Box sizing rules */
@@ -81,10 +92,21 @@ select {
   }
 }
 
+body {
+  min-height: calc(100vh - 2 * 4vw);
+  font-family: Quicksand;
+}
+
 .app {
   width: 100%;
   height: 100vh;
   background-color: $color-bg;
+  color: $color-text;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  @include md {
+    padding: 2rem;
+  }
   // display: grid;
   /* grid-template-rows: 15% 5% 80% 10%; */
   // grid-template-rows: auto auto 1fr auto;

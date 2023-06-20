@@ -19,24 +19,26 @@ export function Form({ onAddItems }) {
 
   return (
     <form className="add-form" onSubmit={handleSubmit}>
-      <h3>What you need for your trip?</h3>
-      <select
-        value={quantity}
-        onChange={(e) => setQuantity(Number(e.target.value))}
-      >
-        {Array.from({ length: 20 }, (_, i) => i + 1).map((num) => (
-          <option value={num} key={num}>
-            {num}
-          </option>
-        ))}
-      </select>
-      <input
-        type="text"
-        placeholder="Item..."
-        value={description}
-        onChange={(e) => setDescription(e.target.value)}
-      />
-      <button type="submit">Add</button>
+      <h3 className="add-form--heading">What you need for your trip?</h3>
+      <div className="add-form--form">
+        <select
+          value={quantity}
+          onChange={(e) => setQuantity(Number(e.target.value))}
+        >
+          {Array.from({ length: 20 }, (_, i) => i + 1).map((num) => (
+            <option value={num} key={num}>
+              {num}
+            </option>
+          ))}
+        </select>
+        <input
+          type="text"
+          placeholder="Item..."
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+        />
+        <button type="submit">Add</button>
+      </div>
     </form>
   );
 }

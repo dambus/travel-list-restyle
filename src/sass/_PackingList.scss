@@ -1,0 +1,19 @@
+.PackingList {
+  width: 100%;
+  min-height: 60vh;
+  ul.list {
+    list-style: none;
+    li {
+      padding: 0;
+
+      input[type="checkbox"] {
+        margin-right: 1rem;
+      }
+      button {
+        border: 0;
+        outline: 0;
+        font-size: 0.6rem;
+      }
+    }
+  }
+}

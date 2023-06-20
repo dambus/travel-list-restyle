@@ -22,7 +22,7 @@ export function PackingList({
       .slice()
       .sort((a, b) => Number(a.packed) - Number(b.packed));
   return (
-    <div className="list">
+    <div className="PackingList">
       <ul className="list">
         {sortedItems.map((item) => (
           <Item
