@@ -32,7 +32,9 @@ export default function App() {
 
   return (
     <div className="app">
-      <Logo />
+      <div className="Logo">
+        <Logo />
+      </div>
       <Form onAddItems={handleAddItems} />
       <PackingList
         items={items}

@@ -1,7 +1,10 @@
-.add-form {
+.Form {
   margin-top: 1rem;
   width: 100%;
-  max-height: 20vh;
+}
+
+.add-form {
+  // max-height: 20vh;
   padding: 1rem;
   background-color: $color-acc-light;
   border-radius: 1rem;
@@ -10,6 +13,15 @@
   flex-direction: column;
   gap: 0.5rem;
   align-items: center;
+  @include md {
+    flex-direction: row;
+    background: linear-gradient(
+      to right,
+      $color-acc-light 33%,
+      $color-bg 50%,
+      rgba($color-bg, 0.1) 99%
+    );
+  }
 
   &--heading {
     color: gray;
@@ -48,10 +60,6 @@
         margin: 0;
         font-size: 0.66rem;
         text-align: center;
-
-        &:active {
-          color: red;
-        }
       }
     }
   }

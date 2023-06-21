@@ -14,7 +14,8 @@ export function Item({ item, onDeleteItem, onToggleItem }) {
           onDeleteItem(item.id);
         }}
       >
-        ❌
+        {/* ❌ */}
+        🗑
       </button>
     </li>
   );
