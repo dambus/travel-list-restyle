@@ -3,9 +3,16 @@ import { Logo } from "./Logo";
 import { Stats } from "./Stats";
 import { PackingList } from "./PackingList";
 import { Form } from "./Form";
+import FormNew from "./FormNew";
+import Modal from "./Modal";
 
 export default function App() {
   const [items, setItems] = useState([]);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  function handleOpenModal() {
+    setModalIsOpen(!modalIsOpen);
+  }
 
   function handleAddItems(item) {
     setItems((items) => [...items, item]);
@@ -35,7 +42,14 @@ export default function App() {
       <div className="Logo">
         <Logo />
       </div>
-      <Form onAddItems={handleAddItems} />
+      {/* <Form onAddItems={handleAddItems} /> */}
+      <FormNew onOpenModal={handleOpenModal} />
+      {modalIsOpen && (
+        <Modal onCloseModal={setModalIsOpen} closeButtonText={"zatvori"}>
+          <Form />
+        </Modal>
+      )}
+
       <PackingList
         items={items}
         onDeleteItem={handleDeleteItem}

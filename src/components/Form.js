@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export function Form({ onAddItems }) {
+export function Form({ onAddItems, onOpenModal }) {
   const [description, setDescription] = useState("");
   const [quantity, setQuantity] = useState(1);
 
