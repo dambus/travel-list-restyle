@@ -43,12 +43,11 @@ export default function Modal({ onCloseModal, children }) {
     <>
       <div className="modal-wrapper" onClick={handleHideModal}>
         <div className="modal-body">
-          <button onClick={handleHideModal}>
+          <button className="modal-close-btn" onClick={handleHideModal}>
             <strong>X</strong>
           </button>
+          <div className="modal-children">{children}</div>
         </div>
-
-        <div>{children}</div>
       </div>
     </>
   );

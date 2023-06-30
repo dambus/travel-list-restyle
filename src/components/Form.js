@@ -18,10 +18,10 @@ export function Form({ onAddItems, onOpenModal }) {
   }
 
   return (
-    <div className="Form">
-      <form className="add-form" onSubmit={handleSubmit}>
-        <h3 className="add-form--heading">What do you need for your trip?</h3>
-        <div className="add-form--form">
+    <div className="">
+      <form className="" onSubmit={handleSubmit}>
+        <h3 className="">What do you need for your trip?</h3>
+        <div className="">
           <select
             value={quantity}
             onChange={(e) => setQuantity(Number(e.target.value))}
