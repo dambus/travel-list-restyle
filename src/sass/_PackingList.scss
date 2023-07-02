@@ -20,6 +20,8 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      align-items: centter;
+      margin-top: 6px;
       @include md {
         max-width: 66%;
       }
@@ -33,14 +35,17 @@
 
       input[type="checkbox"] {
         margin-right: 1rem;
+        width: 24px;
       }
       button {
         border: 0;
         outline: 0;
-        font-size: 0.8125rem;
+        font-size: 16px;
         margin-left: 1rem;
-        background-color: rgba(orangered, 0.1);
-        border-radius: 50%;
+        background-color: rgba(orangered, 0.2);
+        border-radius: 8px;
+        padding: 6px 12px;
+        cursor: pointer;
       }
     }
   }
