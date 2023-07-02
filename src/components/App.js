@@ -19,7 +19,8 @@ export default function App() {
   }
 
   function handleDeleteItem(id) {
-    setItems((items) => items.filter((item) => item.id !== id));
+    const confirmed = window.confirm("Really want to delete this item?");
+    if (confirmed) setItems((items) => items.filter((item) => item.id !== id));
   }
 
   function handleToggleItem(id) {

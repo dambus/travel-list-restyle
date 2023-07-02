@@ -1,3 +1,7 @@
 export function Logo() {
-  return <h1 className="logo">🌊 Far Away 🌴</h1>;
+  return (
+    <h1 className="logo">
+      Far Away <span>🌴🧳😎</span>
+    </h1>
+  );
 }

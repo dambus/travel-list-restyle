@@ -84,10 +84,13 @@
       }
     }
 
-    button {
-      background-color: $color-acc-dark;
-      padding: 8px;
-      border-radius: 8px;
+    button.clear-list {
+      background-color: lightcoral;
+      height: 2.4rem;
+      margin-top: 0;
+
+      // border-radius: 8px;
+      // color: white;
       color: white;
     }
   }
