@@ -1,65 +1,36 @@
-.Form {
-  // height: 80%;
+.form-heading {
+  color: $color-acc-light;
+  text-align: center;
+  margin-bottom: 8px;
 }
 
-.add-form {
-  // max-height: 20vh;
-  padding: 1rem;
-  background-color: $color-acc-light;
-  border-radius: 1rem;
-  color: $color-bg;
+.form-add-item {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  align-items: center;
-  @include md {
-    flex-direction: row;
-    background: linear-gradient(
-      to right,
-      $color-acc-light 33%,
-      $color-bg 50%,
-      rgba($color-bg, 0.1) 99%
-    );
+  gap: 8px;
+
+  input#num-items,
+  input#item-name {
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: $color-acc-light;
+    color: $color-text;
   }
-
-  &--heading {
-    color: gray;
+  label {
+    color: $color-acc-light;
   }
-
-  &--form {
-    display: flex;
-    flex-direction: row;
-    // gap: 8px;
-    justify-content: space-around;
-    align-items: center;
-
-    input,
-    select,
-    button[type="submit"] {
-      border: none;
-      outline: none;
-      font-size: 1rem;
-      padding: 6px;
-      border-radius: 12px;
-    }
-
-    button[type="submit"] {
-      width: 20%;
-      background-color: $color-acc-dark;
-      color: white;
-    }
-
-    input {
-      max-width: 50%;
-    }
-
-    select {
-      option {
-        padding: 0;
-        margin: 0;
-        font-size: 0.66rem;
-        text-align: center;
-      }
-    }
+  .btn-add-item {
+    padding: 8px;
+    border-radius: 8px;
+    width: 50%;
+    align-self: center;
+    margin-top: 1rem;
+    outline: none;
+    border: none;
+    background-color: $color-acc-med;
+    font-size: 2rem;
+    color: white;
   }
 }

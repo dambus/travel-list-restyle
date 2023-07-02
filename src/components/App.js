@@ -45,8 +45,8 @@ export default function App() {
       {/* <Form onAddItems={handleAddItems} /> */}
       <FormNew onOpenModal={handleOpenModal} />
       {modalIsOpen && (
-        <Modal onCloseModal={setModalIsOpen} closeButtonText={"zatvori"}>
-          <Form />
+        <Modal onCloseModal={setModalIsOpen}>
+          <Form onAddItems={handleAddItems} setModalIsOpen={setModalIsOpen} />
         </Modal>
       )}
 
