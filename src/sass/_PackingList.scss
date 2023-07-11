@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+
   width: 100%;
   margin-top: 1rem;
 
@@ -11,10 +13,11 @@
     overflow-y: auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
     max-height: 60vh;
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 1rem;
     li {
       // padding: 0.25rem 1rem 0.25rem 0;
       width: 100%;

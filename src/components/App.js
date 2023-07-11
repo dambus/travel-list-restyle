@@ -43,14 +43,12 @@ export default function App() {
       <div className="Logo">
         <Logo />
       </div>
-      {/* <Form onAddItems={handleAddItems} /> */}
       <FormNew onOpenModal={handleOpenModal} />
       {modalIsOpen && (
         <Modal onCloseModal={setModalIsOpen}>
           <Form onAddItems={handleAddItems} setModalIsOpen={setModalIsOpen} />
         </Modal>
       )}
-
       <PackingList
         items={items}
         onDeleteItem={handleDeleteItem}
