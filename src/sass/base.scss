@@ -16,41 +16,23 @@ $color-acc-med: #aecfd0;
 $color-acc-dark: #73b3b2;
 $color-text: #3c979f;
 
-// CSS RESET
-/* Box sizing rules */
-*,
-*::before,
-*::after {
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-  margin: 0;
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
 }
 
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
-  list-style: none;
-}
-
-/* Set core root defaults */
-html:focus-within {
-  scroll-behavior: smooth;
-}
-
-/* Set core body defaults */
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
@@ -94,23 +76,29 @@ select {
 body {
   // min-height: calc(100vh - 2 * 4vw);
   height: 100vh;
-  display: flex;
-  justify-content: center;
   font-family: Quicksand;
 }
 
 .app {
-  border: 1px solid $color-acc-light;
   width: 100%;
-  @include md {
-    width: 50vw;
-  }
-  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
   display: grid;
   grid-template-rows: auto auto 1fr auto;
+  // width: auto;
+  // width: 100vw;
   height: 100vh;
   background-color: $color-bg;
   color: $color-text;
+  // border-radius: 1rem;
+  // padding: 0 1rem;
+  @include md {
+    // padding: 2rem;
+  }
+  // display: grid;
+  /* grid-template-rows: 15% 5% 80% 10%; */
+  // grid-template-rows: auto auto 1fr auto;
 }
 
 .button-add-new {
