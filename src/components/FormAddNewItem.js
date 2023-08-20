@@ -1,27 +1,21 @@
 import { useState } from "react";
-
-export function Form({ onAddItems, setModalIsOpen }) {
+export default function FormAddNewItem({ onAddItem, setOpenModal }) {
   const [description, setDescription] = useState("");
   const [quantity, setQuantity] = useState(1);
-
   function handleSubmit(e) {
     e.preventDefault();
 
     if (!description) return;
-
     const newItem = { description, quantity, packed: false, id: Date.now() };
-
-    onAddItems(newItem);
-
+    onAddItem(newItem);
     setDescription("");
     setQuantity(1);
-    setModalIsOpen(false);
+    setOpenModal(false);
   }
-
   return (
-    <div className="form-wrapper">
+    <>
       <h3 className="form-heading">What do you need for your trip?</h3>
-      <form className="form-add-item" onSubmit={handleSubmit}>
+      <form className="form-add" action="" onSubmit={handleSubmit}>
         <label htmlFor="num-items">How many?</label>
         <input
           type="text"
@@ -30,16 +24,6 @@ export function Form({ onAddItems, setModalIsOpen }) {
           id="num-items"
           placeholder="how many items"
         />
-        {/* <select
-          value={quantity}
-          onChange={(e) => setQuantity(Number(e.target.value))}
-        >
-          {Array.from({ length: 20 }, (_, i) => i + 1).map((num) => (
-            <option value={num} key={num}>
-              {num}
-            </option>
-          ))}
-        </select> */}
         <label htmlFor="item-name">Of what?</label>
 
         <input
@@ -50,9 +34,9 @@ export function Form({ onAddItems, setModalIsOpen }) {
           id="item-name"
         />
         <button type="submit" className="btn-add-item">
-          +
+          add item
         </button>
       </form>
-    </div>
+    </>
   );
 }
