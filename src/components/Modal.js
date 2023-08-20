@@ -1,15 +1,19 @@
-export default function Modal({ onCloseModal, children }) {
-  function handleHideModal() {
-    onCloseModal(false);
-  }
+export default function Modal({
+  open,
+  onClose,
+  btnContent,
+  onAddItem,
+  children,
+}) {
+  if (!open) return null;
   return (
     <>
-      <div className="modal-wrapper" onClick={handleHideModal}>
-        <div className="modal-body">
-          <button className="modal-close-btn" onClick={handleHideModal}>
-            <strong>X</strong>
+      <div onClick={onClose} className="overlay">
+        <div className="modal-container" onClick={(e) => e.stopPropagation()}>
+          {children}
+          <button className="close-modal" onClick={onClose}>
+            {btnContent}
           </button>
-          <div className="modal-children">{children}</div>
         </div>
       </div>
     </>
